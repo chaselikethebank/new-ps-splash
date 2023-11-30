@@ -4,26 +4,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style></style>
   </head>
-  <body>
-    <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#top">Top</a>
+  <body >
+    <header class="header">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#header" onclick="closeNav()">Home</a>
 
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+        <a href="#about" onclick="closeNav()">About</a>
+        <a href="#services" onclick="closeNav()">Services</a>
+        <a href="#contact" onclick="closeNav()">Contact</a>
+        <a href="https://waterbillcalculator.online/" onclick="closeNav()"
+          >Water Bill Calculator</a
+        >
 
-      <link rel="stylesheet" href="./styles.css" />
-    </div>
-    <nav class="full-width bg-light flex-space m-h-sm">
-      <button class="openbtn db-blue" onclick="openNav()">☰</button>
-
-      <div>
-        <h1 class="p-4">Pro-Sprinkler</h1>
+        <link rel="stylesheet" href="./styles.css" />
       </div>
-      <p class="pr-4">Kingwood, Tx 📍</p>
-    </nav>
+      <nav class="full-width bg-light flex-space m-h-sm nav">
+        <button class="openbtn db-blue" onclick="openNav()">☰</button>
 
+        <div>
+          <h1>Pro-Sprinkler</h1>
+        </div>
+        <p class="pr-4">Kingwood, Tx 📍</p>
+      </nav>
+    </header>
     <div id="main" class="hero">
       <h1 id="top" class="light-weight">
         We have been <span class="db-blue bold">fixing sprinklers</span> for
@@ -41,8 +45,8 @@
     <!-- end of hero -->
 
     <!-- beginning of carousel -->
-    <div class="carousel-container">
-      <div class="carousel">
+    <div class="carousel-container" id="carousel" >
+      <div class="carousel slide blur">
         <img src="./assets/IMG_1152.jpeg" alt="Image 1" />
         <img src="./assets/IMG_1046.jpeg" alt="Image 2" />
         <img src="./assets/IMG_1148.jpeg" alt="Image 3" />
@@ -55,7 +59,7 @@
     <div class="pb-8"></div>
 
     <!-- beginning of what we do -->
-    <div class="main m-4">
+    <div class="main m-4 ">
       <feature id="about">
         <h1 class="light-weight">What we do</h1>
         <p class="p-r-8">
@@ -73,67 +77,82 @@
         </p>
       </feature>
       <img id="dave" src="assets/imagejpeg_0.jpg" width="500" />
-      <div class="pb-8"></div>
+
+      <!-- services cards  -->
+
+      <div class="pb-8 slide blur" id="services"></div>
       <h1 class="light-weight">Services</h1>
 
-      <div id="services" class="grid-container">
-
-        <div class="card">
+      <div class="grid-container">
+        <div class="card" id="c-1">
           <div class="emoji-icon">🛠️</div>
           <h2>Repair</h2>
           <p>Leaks, valves and controllers</p>
+          <a href="#about">
+            <button class="clear">Book an appointment</button></a
+          >
         </div>
 
-        <div class="card">
+        <div class="card" id="c-2">
           <div class="emoji-icon">🧊</div>
 
           <h2>Backflow</h2>
           <p>Inspect, repair and winterize</p>
+          <a href="#about">
+            <button class="clear">Schedule your freeze deterrent</button></a
+          >
         </div>
 
-        <div class="card">
+        <div class="card" id="c-3">
           <div class="emoji-icon">💵</div>
 
-          <h2>
-            Conservation
-            
-          </h2>
+          <h2>Conservation</h2>
           <p>Save Water, Save Money</p>
+          <a href="#about">
+            <button class="clear">Try our Irrigation Calculator</button></a
+          >
         </div>
       </div>
       <div class="pb-8"></div>
 
       <!-- contact form  -->
-      <feature id="contact" class="main">
-        <h1 class="light-weight">Contact</h1>
+      <feature id="contact" class="main slide blur">
+        <h1 class="light-weight">Contact Us</h1>
+        <div class="py-2"></div>
+
+        <h3>Call Today:</h3>
+        <p class="light-weight">281-852-6350</p>
+
+        <div class="py-2"></div>
+        <h3>Draft an email:</h3>
+
         <form
-          action="mailto:your-email@example.com"
+          action="mailto:dave.demaster@Gmail.com.com"
           method="post"
           enctype="text/plain"
         >
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <div class="column ctr-self p-r-8 w-50">
+            <label class="py-2" for="name">Name:</label>
+            <input class="" type="text" id="name" name="name" required />
 
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required />
+            <label class="py-2" for="subject">Subject:</label>
+            <input class="" type="text" id="subject" name="subject" required />
 
-          <label for="body">Body:</label>
-          <textarea id="body" name="body" required></textarea>
-
-          <label for="contact">Contact:</label>
-          <input type="text" id="contact" name="contact" required />
-
-          <input type="submit" value="Submit" />
+            <label class="py-2" for="body">How can Pro-Sprinkler help?</label>
+            <textarea class="p-4" id="body" name="body" required></textarea>
+          </div>
+          <div class="p-2"></div>
+          <button type="submit" value="Submit" class="button p-2">
+            submit
+          </button>
         </form>
       </feature>
     </div>
 
     <footer class="footer flex-space">
-      <div class="column">Pro-Sprinkler
-        <div>
-      Lawn Irrigation Services
-         
-        </div>
+      <div class="column">
+        Pro-Sprinkler
+        <div>Lawn Irrigation Services</div>
       </div>
       <div class="column">
         <div><a href="mailto:dave.demaster@gmail.com">Email ✉️ </a></div>
@@ -145,27 +164,37 @@
         <div>Kingwood, Tx 📍</div>
       </div>
     </footer>
-    <p class="pr-4"> <a href="https://buildmacro.tech/"  class="font-dark tiny ">Site Design: Build Macro Dot Tech</a></p>
+    <p class="pr-4">
+      <a href="https://buildmacro.tech/" class="font-dark tiny"
+        >Site Design: Build Macro Dot Tech</a
+      >
+    </p>
     <script>
       function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
         document.getElementById("main").style.filter = "blur(4px)";
+        document.getElementById("carousel").style.marginLeft = "250px";
+        document.getElementById("carousel").style.filter = "blur(4px)";
       }
 
       function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
         document.getElementById("main").style.filter = "none";
+        document.getElementById("carousel").style.filter = "none";
+        document.getElementById("carousel").style.marginLeft = "0";
+
+
       }
 
-    //   carousel 
+      //   carousel
       const carousel = document.querySelector(".carousel");
       let currentIndex = 0;
 
       function showNextImage() {
         currentIndex = (currentIndex + 1) % carousel.children.length;
-        const translateValue = -currentIndex * (450 + 20); // 150px image width + 20px margin
+        const translateValue = -currentIndex * (350 + 20); // 150px image width + 20px margin
         carousel.style.transform = `translateX(${translateValue}px)`;
       }
 

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style></style>
+  </head>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#top">Top</a>
+
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+
+      <link rel="stylesheet" href="./styles.css" />
+    </div>
+    <nav class="full-width bg-light flex-space m-h-sm">
+      <button class="openbtn db-blue" onclick="openNav()">☰</button>
+
+      <div>
+        <h1 class="p-4">Pro-Sprinkler</h1>
+      </div>
+      <p class="pr-4">Kingwood, Tx 📍</p>
+    </nav>
+
+    <div id="main" class="hero">
+      <h1 id="top" class="light-weight">
+        We have been <span class="db-blue bold">fixing sprinklers</span> for
+        <span class="db-blue bold">40+ years</span>. <br />Let us fix yours.
+      </h1>
+      <br />
+      <div class="cta">
+        <a href="tel:+12818526350">
+          <button>Book an appointment</button>
+        </a>
+        <a href="#about"> <button class="clear">Learn More</button></a>
+      </div>
+    </div>
+
+    <!-- end of hero -->
+
+    <!-- beginning of carousel -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="./assets/IMG_1152.jpeg" alt="Image 1" />
+        <img src="./assets/IMG_1046.jpeg" alt="Image 2" />
+        <img src="./assets/IMG_1148.jpeg" alt="Image 3" />
+        <img src="./assets/IMG_1272.jpeg" alt="Image 4" />
+        <img src="./assets/imagejpeg_2.jpg" alt="Image 5" />
+        <img src="./assets/imagejpeg_3 (1).jpg" alt="Image 6" />
+        <img src="./assets/20200111_112544.jpg" alt="Image 7" />
+      </div>
+    </div>
+    <div class="pb-8"></div>
+
+    <!-- beginning of what we do -->
+    <div class="main m-4">
+      <feature id="about">
+        <h1 class="light-weight">What we do</h1>
+        <p class="p-r-8">
+          With over 40 years of experience in Grounds Maintenance, we specialize
+          in every aspect of irrigation. Our services include general
+          maintenance, thorough backflow testing and repair, strategic system
+          redesigns for new pool or patio installations, and a strong focus on
+          water conservation.
+        </p>
+        <p class="p-r-8">
+          Our team brings extensive knowledge and practical expertise to ensure
+          your landscapes flourish with efficient and sustainable irrigation
+          solutions. Discover the essence of our proficiency as we blend
+          tradition with innovation for you to best enjoy your home landscaping.
+        </p>
+      </feature>
+      <img id="dave" src="assets/imagejpeg_0.jpg" width="500" />
+      <div class="pb-8"></div>
+      <h1 class="light-weight">Services</h1>
+
+      <div id="services" class="grid-container">
+
+        <div class="card">
+          <div class="emoji-icon">🛠️</div>
+          <h2>Repair</h2>
+          <p>Leaks, valves and controllers</p>
+        </div>
+
+        <div class="card">
+          <div class="emoji-icon">🧊</div>
+
+          <h2>Backflow</h2>
+          <p>Inspect, repair and winterize</p>
+        </div>
+
+        <div class="card">
+          <div class="emoji-icon">💵</div>
+
+          <h2>
+            Conservation
+            
+          </h2>
+          <p>Save Water, Save Money</p>
+        </div>
+      </div>
+      <div class="pb-8"></div>
+
+      <!-- contact form  -->
+      <feature id="contact" class="main">
+        <h1 class="light-weight">Contact</h1>
+        <form
+          action="mailto:your-email@example.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required />
+
+          <label for="body">Body:</label>
+          <textarea id="body" name="body" required></textarea>
+
+          <label for="contact">Contact:</label>
+          <input type="text" id="contact" name="contact" required />
+
+          <input type="submit" value="Submit" />
+        </form>
+      </feature>
+    </div>
+
+    <footer class="footer flex-space">
+      <div class="column">Pro-Sprinkler
+        <div>
+      Lawn Irrigation Services
+         
+        </div>
+      </div>
+      <div class="column">
+        <div><a href="mailto:dave.demaster@gmail.com">Email ✉️ </a></div>
+        <div>
+          <p class="pr-4 font-white">
+            <a href="tel:+12818526350">281-852-6350 ☎</a>
+          </p>
+        </div>
+        <div>Kingwood, Tx 📍</div>
+      </div>
+    </footer>
+    <p class="pr-4"> <a href="https://buildmacro.tech/"  class="font-dark tiny ">Site Design: Build Macro Dot Tech</a></p>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("main").style.filter = "blur(4px)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("main").style.filter = "none";
+      }
+
+    //   carousel 
+      const carousel = document.querySelector(".carousel");
+      let currentIndex = 0;
+
+      function showNextImage() {
+        currentIndex = (currentIndex + 1) % carousel.children.length;
+        const translateValue = -currentIndex * (450 + 20); // 150px image width + 20px margin
+        carousel.style.transform = `translateX(${translateValue}px)`;
+      }
+
+      setInterval(showNextImage, 4000); // Change image every 4 seconds (adjust as needed)
+    </script>
+  </body>
+</html>

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style></style>
   </head>
-  <body >
+  <body>
     <header class="header">
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -45,7 +45,7 @@
     <!-- end of hero -->
 
     <!-- beginning of carousel -->
-    <div class="carousel-container" id="carousel" >
+    <div class="carousel-container" id="carousel">
       <div class="carousel slide blur">
         <img src="./assets/IMG_1152.jpeg" alt="Image 1" />
         <img src="./assets/IMG_1046.jpeg" alt="Image 2" />
@@ -59,24 +59,27 @@
     <div class="pb-8"></div>
 
     <!-- beginning of what we do -->
-    <div class="main m-4 ">
+    <div class="main m-4">
       <feature id="about">
         <h1 class="light-weight">What we do</h1>
-        <p class="p-r-8">
+        <p class="p-r-8 p-2">
           With over 40 years of experience in Grounds Maintenance, we specialize
           in every aspect of irrigation. Our services include general
           maintenance, thorough backflow testing and repair, strategic system
           redesigns for new pool or patio installations, and a strong focus on
           water conservation.
         </p>
-        <p class="p-r-8">
+        <p class="p-r-8 p-2">
           Our team brings extensive knowledge and practical expertise to ensure
           your landscapes flourish with efficient and sustainable irrigation
           solutions. Discover the essence of our proficiency as we blend
           tradition with innovation for you to best enjoy your home landscaping.
         </p>
       </feature>
-      <img id="dave" src="assets/imagejpeg_0.jpg" width="500" />
+      <div class="ctr-self">
+        <img id="dave" src="assets/imagejpeg_0.jpg" width="500" />
+      </div>
+      
 
       <!-- services cards  -->
 
@@ -88,7 +91,7 @@
           <div class="emoji-icon">🛠️</div>
           <h2>Repair</h2>
           <p>Leaks, valves and controllers</p>
-          <a href="#about">
+          <a href="tel:+12818526350">
             <button class="clear">Book an appointment</button></a
           >
         </div>
@@ -98,7 +101,7 @@
 
           <h2>Backflow</h2>
           <p>Inspect, repair and winterize</p>
-          <a href="#about">
+          <a href="tel:+12818526350">
             <button class="clear">Schedule your freeze deterrent</button></a
           >
         </div>
@@ -108,7 +111,7 @@
 
           <h2>Conservation</h2>
           <p>Save Water, Save Money</p>
-          <a href="#about">
+          <a href="tel:+12818526350">
             <button class="clear">Try our Irrigation Calculator</button></a
           >
         </div>
@@ -164,7 +167,7 @@
         <div>Kingwood, Tx 📍</div>
       </div>
     </footer>
-    <p class="pr-4">
+    <p class="p-2 m-0 bg-light flex ctr-self">
       <a href="https://buildmacro.tech/" class="font-dark tiny"
         >Site Design: Build Macro Dot Tech</a
       >
@@ -184,8 +187,6 @@
         document.getElementById("main").style.filter = "none";
         document.getElementById("carousel").style.filter = "none";
         document.getElementById("carousel").style.marginLeft = "0";
-
-
       }
 
       //   carousel

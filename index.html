@@ -7,9 +7,10 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230061fe'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E" type="image/svg+xml">
 
-    <style></style>
   </head>
+
   <body>
     <header class="header">
       <div id="mySidebar" class="sidebar">
@@ -24,12 +25,11 @@
         <a href="https://waterbillcalculator.online/" onclick="closeNav()"
           >Water Bill Calculator</a
         >
-
       </div>
-      <nav class="full-width bg-light flex-space m-h-sm nav">
+      <nav class="w-100 bg-light flex-space m-h-sm nav" id="top-nav">
         <button
-          class="openbtn db-blue"
-          style="padding: 0.6rem; border-radius: 0px"
+          class="openbtn db-blue hamburger"
+         
           onclick="openNav()"
         >
           <i class="fa-solid fa-bars"></i>
@@ -38,7 +38,7 @@
         <div>
           <h1>Pro-Sprinkler</h1>
         </div>
-        <p class="pr-4">
+        <p class="pr-4 ">
           Kingwood, Tx
           <i class="fa-solid fa-map-pin"></i>
         </p>
@@ -51,6 +51,47 @@
           <span class="db-blue bold">40+ years</span>. <br />Let us fix yours.
         </h1>
         <br />
+        <div
+          class="image-container"
+          style="
+            max-width: 95vw;
+            overflow: hidden;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <img
+            src="https://ps-assets-2024.s3.us-east-2.amazonaws.com/IMG_1152.jpeg"
+            alt="Image 1"
+            style="width: 20%; height: auto"
+          />
+          <img
+            src="https://ps-assets-2024.s3.us-east-2.amazonaws.com/imagejpeg_2.jpg"
+            alt="Image 2"
+            style="width: 20%; height: auto"
+          />
+          <img
+            src="https://ps-assets-2024.s3.us-east-2.amazonaws.com/IMG_1274.jpeg"
+            alt="Image 3"
+            style="width: 20%; height: auto"
+          />
+          <img
+            src="https://ps-assets-2024.s3.us-east-2.amazonaws.com/IMG_1148.jpeg"
+            alt="Image 5"
+            style="width: 20%; height: auto"
+          />
+
+          <img
+            src="https://ps-assets-2024.s3.us-east-2.amazonaws.com/IMG_1273.jpeg"
+            alt="Image 5"
+            style="width: 20%; height: auto"
+          />
+          <!-- <img src="./assets/imagejpeg_3 (1).jpg" alt="Image 6" style="width: 25%; height: auto;" />
+          <img src="./assets/20200111_112544.jpg" alt="Image 7" style="width: 25%; height: auto;" /> -->
+        </div>
+        <br />
         <div class="cta">
           <a href="tel:+12818526350">
             <button>Book an appointment</button>
@@ -62,30 +103,16 @@
       <!-- end of hero -->
 
       <!-- beginning of carousel -->
-      <div class="carousel-container" id="carousel">
-        <div
-          class="carousel slide blur"
-          tyle="max-width: 1000px; margin: auto;"
-        >
-          <img src="./assets/IMG_1152.jpeg" alt="Image 1" />
-          <img src="./assets/IMG_1046.jpeg" alt="Image 2" />
-          <img src="./assets/IMG_1148.jpeg" alt="Image 3" />
-          <img src="./assets/IMG_1272.jpeg" alt="Image 4" />
-          <img src="./assets/imagejpeg_2.jpg" alt="Image 5" />
-          <img src="./assets/imagejpeg_3 (1).jpg" alt="Image 6" />
-          <img src="./assets/20200111_112544.jpg" alt="Image 7" />
-        </div>
-       
-      </div>
-      <div class=" ctr-self m-2">
-        <button id="prevBtn" class="m-2 px-2 btn-wide">Previous</button>
-        <button id="nextBtn" class="m-2 px-2 btn-wide">Next</button>
-      </div>
+      <!-- beginning of images left to right -->
+
+      <!-- end of images left to right -->
 
       <!-- beginning of what we do -->
       <div class="main m-4">
         <feature id="about" class="">
-          <h1 class="light-weight ctr-self">What we do</h1>
+          <h1 class="light-weight ctr-self">
+            <span class="db-blue bold">About us</span>
+          </h1>
           <p class="p-r-8 p-2 ctr-self" style="max-width: 800px; margin: auto">
             With over 40 years of experience in Grounds Maintenance, we
             specialize in every aspect of irrigation. Our services include
@@ -101,7 +128,11 @@
           </p>
         </feature>
         <div class="ctr-self">
-          <img id="dave" src="assets/imagejpeg_0.jpg" style="max-width: 500px; height: auto;" />
+          <img
+            id="dave"
+            src="https://ps-assets-2024.s3.us-east-2.amazonaws.com/imagejpeg_0.jpg"
+            style="max-width: 500px; height: auto"
+          />
         </div>
 
         <!-- services cards  -->
@@ -111,15 +142,18 @@
           id="services"
           style="max-width: 800px"
         ></div>
-        <h1 class="light-weight ctr-self">Services</h1>
+
+        <h1 class="light-weight ctr-self">
+          <span class="db-blue bold">Our Services</span>
+        </h1>
 
         <div class="grid-container" style="max-width: 800px; margin: auto">
           <div class="card" id="c-1">
             <div class="emoji-icon">
               <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
-            <h2>Repair</h2>
-            <p>Leaks, valves and controllers</p>
+            <h2><span class="db-blue bold">Repair</span></h2>
+            <p>Leaks, breaks, valves and controllers</p>
             <a href="tel:+12818526350">
               <button class="clear">Book an appointment</button></a
             >
@@ -130,7 +164,7 @@
               <i class="fa-regular fa-snowflake"></i>
             </div>
 
-            <h2>Backflow</h2>
+            <h2><span class="db-blue bold">Backflow</span></h2>
             <p>Inspect, repair and winterize</p>
             <a href="tel:+12818526350">
               <button class="clear">Schedule your freeze deterrent</button></a
@@ -140,7 +174,7 @@
           <div class="card" id="c-3">
             <div class="emoji-icon"><i class="fa-solid fa-money-bill"></i></div>
 
-            <h2>Conservation</h2>
+            <h2><span class="db-blue bold">Conservation</span></h2>
             <p>Save Water, Save Money</p>
             <a href="tel:+12818526350">
               <button class="clear">Try our Irrigation Calculator</button></a
@@ -151,16 +185,24 @@
 
         <!-- contact form  -->
         <feature id="contact" class="main slide blur">
-          <h1 class="light-weight ctr-self">Contact Us</h1>
+          <h1 class="light-weight ctr-self">
+            <span class="db-blue bold">Contact Us</span>
+          </h1>
           <div class="py-2" style="max-width: 800px; margin: auto">
-            <h3><i class="fa-solid fa-phone"></i>  Call Today:</h3>
-            <p class="light-weight">281-852-6350 </p>
+            <h3>
+              <i class="fa-solid fa-phone"></i>
+              <span class="db-blue bold">Call Today:</span>
+            </h3>
+            <p class="light-weight">281-852-6350</p>
 
             <div class="py-2"></div>
             <h3>Or</h3>
             <div class="py-2"></div>
 
-            <h3><i class="fa-solid fa-envelope"></i> Start an email:</h3>
+            <h3>
+              <i class="fa-solid fa-envelope"></i>
+              <span class="db-blue bold">Start an email:</span>
+            </h3>
 
             <form
               action="mailto:dave.demaster@Gmail.com.com"
@@ -181,7 +223,8 @@
                 />
 
                 <label class="py-2" for="body"
-                  >How can Pro-Sprinkler help?</label
+                  >How can
+                  <span class="db-blue bold">Pro-Sprinkler </span>help?</label
                 >
                 <textarea class="p-4" id="body" name="body" required></textarea>
               </div>
@@ -218,7 +261,7 @@
         </div>
       </div>
     </footer>
-    <p class="p-2 m-0 bg-light flex ctr-self">
+    <p class="m-0 bg-light flex ctr-self" style="padding: 0.1rem">
       <a href="https://buildmacro.tech/" class="font-dark tiny"
         >Site Design: Build Macro Dot Tech</a
       >
@@ -240,67 +283,70 @@
         document.getElementById("carousel").style.marginLeft = "0";
       }
 
-// Carousel
-const carousel = document.querySelector(".carousel");
-let currentIndex = 0;
-const totalImages = carousel.children.length;
-let nextButtonClickCount = 0;
+      // Carousel
+      // const carousel = document.querySelector(".carousel");
+      // let currentIndex = 0;
+      // const totalImages = carousel.children.length;
+      // let nextButtonClickCount = 0;
 
-function showImage(index) {
-  const translateValue = -index * (350 + 20); // 150px image width + 20px margin
-  carousel.style.transform = `translateX(${translateValue}px)`;
-}
+      // function showImage(index) {
+      //   const translateValue = -index * (350 + 20); // 150px image width + 20px margin
+      //   carousel.style.transform = `translateX(${translateValue}px)`;
+      // }
 
-function showNextImage() {
-  currentIndex = (currentIndex + 1) % totalImages;
+      // function showNextImage() {
+      //   currentIndex = (currentIndex + 1) % totalImages;
 
-  if (currentIndex === 0) {
-    // Move to the end seamlessly
-    carousel.style.transition = "none";
-    currentIndex = totalImages;
-    showImage(currentIndex);
-    carousel.offsetHeight; // Trigger reflow
-    carousel.style.transition = ""; // Re-enable transition
-  } else {
-    showImage(currentIndex);
-  }
+      //   if (currentIndex === 0) {
+      //     // Move to the end seamlessly
+      //     carousel.style.transition = "none";
+      //     currentIndex = totalImages;
+      //     showImage(currentIndex);
+      //     carousel.offsetHeight; // Trigger reflow
+      //     carousel.style.transition = ""; // Re-enable transition
+      //   } else {
+      //     showImage(currentIndex);
+      //   }
 
-  nextButtonClickCount++;
+      //   nextButtonClickCount++;
 
-  // Check if the "Next" button should be hidden
-  if (nextButtonClickCount >= 4) {
-    document.getElementById("nextBtn").style.display = "none";
-  }
-}
+      //   // Check if the "Next" button should be hidden
+      //   if (nextButtonClickCount >= 4) {
+      //     document.getElementById("nextBtn").style.display = "none";
+      //   }
+      // }
 
-function showPrevImage() {
-  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      // function showPrevImage() {
+      //   currentIndex = (currentIndex - 1 + totalImages) % totalImages;
 
-  if (currentIndex === totalImages - 1) {
-    // Move to the beginning seamlessly
-    carousel.style.transition = "none";
-    currentIndex = 0;
-    showImage(currentIndex);
-    carousel.offsetHeight; // Trigger reflow
-    carousel.style.transition = ""; // Re-enable transition
-  } else {
-    showImage(currentIndex);
-  }
+      //   if (currentIndex === totalImages - 1) {
+      //     // Move to the beginning seamlessly
+      //     carousel.style.transition = "none";
+      //     currentIndex = 0;
+      //     showImage(currentIndex);
+      //     carousel.offsetHeight; // Trigger reflow
+      //     carousel.style.transition = ""; // Re-enable transition
+      //   } else {
+      //     showImage(currentIndex);
+      //   }
 
-  // Reset the button count when going back
-  nextButtonClickCount = 0;
+      //   // Reset the button count when going back
+      //   nextButtonClickCount = 0;
 
-  // Ensure the "Next" button is visible
-  document.getElementById("nextBtn").style.display = "block";
-}
+      //   // Ensure the "Next" button is visible
+      //   document.getElementById("nextBtn").style.display = "block";
+      // }
 
-// Add event listeners for next and previous buttons
-document.getElementById("prevBtn").addEventListener("click", showPrevImage);
-document.getElementById("nextBtn").addEventListener("click", showNextImage);
+      // // Add event listeners for next and previous buttons
+      // document
+      //   .getElementById("prevBtn")
+      //   .addEventListener("click", showPrevImage);
+      // document
+      //   .getElementById("nextBtn")
+      //   .addEventListener("click", showNextImage);
 
-// Initial display
-showImage(currentIndex);
-
+      // // Initial display
+      // showImage(currentIndex);
     </script>
   </body>
 </html>

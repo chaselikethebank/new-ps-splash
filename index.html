@@ -2,12 +2,20 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/c1e56ff018.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles.css" />
+
     <style></style>
   </head>
   <body>
     <header class="header">
       <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          ><i class="fa-solid fa-x"></i
+        ></a>
         <a href="#header" onclick="closeNav()">Home</a>
 
         <a href="#about" onclick="closeNav()">About</a>
@@ -17,154 +25,197 @@
           >Water Bill Calculator</a
         >
 
-        <link rel="stylesheet" href="./styles.css" />
       </div>
       <nav class="full-width bg-light flex-space m-h-sm nav">
-        <button class="openbtn db-blue" onclick="openNav()">☰</button>
+        <button
+          class="openbtn db-blue"
+          style="padding: 0.6rem; border-radius: 0px"
+          onclick="openNav()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
         <div>
           <h1>Pro-Sprinkler</h1>
         </div>
-        <p class="pr-4">Kingwood, Tx 📍</p>
+        <p class="pr-4">
+          Kingwood, Tx
+          <i class="fa-solid fa-map-pin"></i>
+        </p>
       </nav>
     </header>
-    <div id="main" class="hero">
-      <h1 id="top" class="light-weight">
-        We have been <span class="db-blue bold">fixing sprinklers</span> for
-        <span class="db-blue bold">40+ years</span>. <br />Let us fix yours.
-      </h1>
-      <br />
-      <div class="cta">
-        <a href="tel:+12818526350">
-          <button>Book an appointment</button>
-        </a>
-        <a href="#about"> <button class="clear">Learn More</button></a>
-      </div>
-    </div>
-
-    <!-- end of hero -->
-
-    <!-- beginning of carousel -->
-    <div class="carousel-container" id="carousel">
-      <div class="carousel slide blur">
-        <img src="./assets/IMG_1152.jpeg" alt="Image 1" />
-        <img src="./assets/IMG_1046.jpeg" alt="Image 2" />
-        <img src="./assets/IMG_1148.jpeg" alt="Image 3" />
-        <img src="./assets/IMG_1272.jpeg" alt="Image 4" />
-        <img src="./assets/imagejpeg_2.jpg" alt="Image 5" />
-        <img src="./assets/imagejpeg_3 (1).jpg" alt="Image 6" />
-        <img src="./assets/20200111_112544.jpg" alt="Image 7" />
-      </div>
-    </div>
-    <div class="pb-8"></div>
-
-    <!-- beginning of what we do -->
-    <div class="main m-4">
-      <feature id="about">
-        <h1 class="light-weight">What we do</h1>
-        <p class="p-r-8 p-2">
-          With over 40 years of experience in Grounds Maintenance, we specialize
-          in every aspect of irrigation. Our services include general
-          maintenance, thorough backflow testing and repair, strategic system
-          redesigns for new pool or patio installations, and a strong focus on
-          water conservation.
-        </p>
-        <p class="p-r-8 p-2">
-          Our team brings extensive knowledge and practical expertise to ensure
-          your landscapes flourish with efficient and sustainable irrigation
-          solutions. Discover the essence of our proficiency as we blend
-          tradition with innovation for you to best enjoy your home landscaping.
-        </p>
-      </feature>
-      <div class="ctr-self">
-        <img id="dave" src="assets/imagejpeg_0.jpg" width="500" />
-      </div>
-      
-
-      <!-- services cards  -->
-
-      <div class="pb-8 slide blur" id="services"></div>
-      <h1 class="light-weight">Services</h1>
-
-      <div class="grid-container">
-        <div class="card" id="c-1">
-          <div class="emoji-icon">🛠️</div>
-          <h2>Repair</h2>
-          <p>Leaks, valves and controllers</p>
+    <div id="main-section">
+      <div id="main" class="hero" style="max-width: 1000px; margin: auto">
+        <h1 id="top" class="light-weight">
+          We have been <span class="db-blue bold">fixing sprinklers</span> for
+          <span class="db-blue bold">40+ years</span>. <br />Let us fix yours.
+        </h1>
+        <br />
+        <div class="cta">
           <a href="tel:+12818526350">
-            <button class="clear">Book an appointment</button></a
-          >
-        </div>
-
-        <div class="card" id="c-2">
-          <div class="emoji-icon">🧊</div>
-
-          <h2>Backflow</h2>
-          <p>Inspect, repair and winterize</p>
-          <a href="tel:+12818526350">
-            <button class="clear">Schedule your freeze deterrent</button></a
-          >
-        </div>
-
-        <div class="card" id="c-3">
-          <div class="emoji-icon">💵</div>
-
-          <h2>Conservation</h2>
-          <p>Save Water, Save Money</p>
-          <a href="tel:+12818526350">
-            <button class="clear">Try our Irrigation Calculator</button></a
-          >
+            <button>Book an appointment</button>
+          </a>
+          <a href="#about"> <button class="clear">Learn More</button></a>
         </div>
       </div>
-      <div class="pb-8"></div>
 
-      <!-- contact form  -->
-      <feature id="contact" class="main slide blur">
-        <h1 class="light-weight">Contact Us</h1>
-        <div class="py-2"></div>
+      <!-- end of hero -->
 
-        <h3>Call Today:</h3>
-        <p class="light-weight">281-852-6350</p>
-
-        <div class="py-2"></div>
-        <h3>Draft an email:</h3>
-
-        <form
-          action="mailto:dave.demaster@Gmail.com.com"
-          method="post"
-          enctype="text/plain"
+      <!-- beginning of carousel -->
+      <div class="carousel-container" id="carousel">
+        <div
+          class="carousel slide blur"
+          tyle="max-width: 1000px; margin: auto;"
         >
-          <div class="column ctr-self p-r-8 w-50">
-            <label class="py-2" for="name">Name:</label>
-            <input class="" type="text" id="name" name="name" required />
+          <img src="./assets/IMG_1152.jpeg" alt="Image 1" />
+          <img src="./assets/IMG_1046.jpeg" alt="Image 2" />
+          <img src="./assets/IMG_1148.jpeg" alt="Image 3" />
+          <img src="./assets/IMG_1272.jpeg" alt="Image 4" />
+          <img src="./assets/imagejpeg_2.jpg" alt="Image 5" />
+          <img src="./assets/imagejpeg_3 (1).jpg" alt="Image 6" />
+          <img src="./assets/20200111_112544.jpg" alt="Image 7" />
+        </div>
+       
+      </div>
+      <div class=" ctr-self m-2">
+        <button id="prevBtn" class="m-2 px-2 btn-wide">Previous</button>
+        <button id="nextBtn" class="m-2 px-2 btn-wide">Next</button>
+      </div>
 
-            <label class="py-2" for="subject">Subject:</label>
-            <input class="" type="text" id="subject" name="subject" required />
+      <!-- beginning of what we do -->
+      <div class="main m-4">
+        <feature id="about" class="">
+          <h1 class="light-weight ctr-self">What we do</h1>
+          <p class="p-r-8 p-2 ctr-self" style="max-width: 800px; margin: auto">
+            With over 40 years of experience in Grounds Maintenance, we
+            specialize in every aspect of irrigation. Our services include
+            general maintenance, thorough backflow testing and repair, strategic
+            system redesigns for new pool or patio installations, and a strong
+            focus on water conservation.
+            <br /><br />
+            Our team brings extensive knowledge and practical expertise to
+            ensure your landscapes flourish with efficient and sustainable
+            irrigation solutions. Discover the essence of our proficiency as we
+            blend tradition with innovation for you to best enjoy your home
+            landscaping.
+          </p>
+        </feature>
+        <div class="ctr-self">
+          <img id="dave" src="assets/imagejpeg_0.jpg" style="max-width: 500px; height: auto;" />
+        </div>
 
-            <label class="py-2" for="body">How can Pro-Sprinkler help?</label>
-            <textarea class="p-4" id="body" name="body" required></textarea>
+        <!-- services cards  -->
+
+        <div
+          class="pb-8 slide blur"
+          id="services"
+          style="max-width: 800px"
+        ></div>
+        <h1 class="light-weight ctr-self">Services</h1>
+
+        <div class="grid-container" style="max-width: 800px; margin: auto">
+          <div class="card" id="c-1">
+            <div class="emoji-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h2>Repair</h2>
+            <p>Leaks, valves and controllers</p>
+            <a href="tel:+12818526350">
+              <button class="clear">Book an appointment</button></a
+            >
           </div>
-          <div class="p-2"></div>
-          <button type="submit" value="Submit" class="button p-2">
-            submit
-          </button>
-        </form>
-      </feature>
-    </div>
 
+          <div class="card" id="c-2">
+            <div class="emoji-icon">
+              <i class="fa-regular fa-snowflake"></i>
+            </div>
+
+            <h2>Backflow</h2>
+            <p>Inspect, repair and winterize</p>
+            <a href="tel:+12818526350">
+              <button class="clear">Schedule your freeze deterrent</button></a
+            >
+          </div>
+
+          <div class="card" id="c-3">
+            <div class="emoji-icon"><i class="fa-solid fa-money-bill"></i></div>
+
+            <h2>Conservation</h2>
+            <p>Save Water, Save Money</p>
+            <a href="tel:+12818526350">
+              <button class="clear">Try our Irrigation Calculator</button></a
+            >
+          </div>
+        </div>
+        <div class="pb-8"></div>
+
+        <!-- contact form  -->
+        <feature id="contact" class="main slide blur">
+          <h1 class="light-weight ctr-self">Contact Us</h1>
+          <div class="py-2" style="max-width: 800px; margin: auto">
+            <h3><i class="fa-solid fa-phone"></i>  Call Today:</h3>
+            <p class="light-weight">281-852-6350 </p>
+
+            <div class="py-2"></div>
+            <h3>Or</h3>
+            <div class="py-2"></div>
+
+            <h3><i class="fa-solid fa-envelope"></i> Start an email:</h3>
+
+            <form
+              action="mailto:dave.demaster@Gmail.com.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="column ctr-self p-r-8 w-100">
+                <label class="py-2" for="name">Name:</label>
+                <input class="" type="text" id="name" name="name" required />
+
+                <label class="py-2" for="subject">Subject:</label>
+                <input
+                  class=""
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                />
+
+                <label class="py-2" for="body"
+                  >How can Pro-Sprinkler help?</label
+                >
+                <textarea class="p-4" id="body" name="body" required></textarea>
+              </div>
+              <div class="p-2"></div>
+              <button type="submit" value="Submit" class="button p-2">
+                submit
+              </button>
+            </form>
+          </div>
+        </feature>
+      </div>
+    </div>
     <footer class="footer flex-space">
       <div class="column">
         Pro-Sprinkler
         <div>Lawn Irrigation Services</div>
       </div>
       <div class="column">
-        <div><a href="mailto:dave.demaster@gmail.com">Email ✉️ </a></div>
+        <div>
+          <a href="mailto:dave.demaster@gmail.com"
+            >Email <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
         <div>
           <p class="pr-4 font-white">
-            <a href="tel:+12818526350">281-852-6350 ☎</a>
+            <a href="tel:+12818526350"
+              >281-852-6350 <i class="fa-solid fa-phone"></i
+            ></a>
           </p>
         </div>
-        <div>Kingwood, Tx 📍</div>
+        <div>
+          Kingwood, Tx
+          <i class="fa-solid fa-map-pin"></i>
+        </div>
       </div>
     </footer>
     <p class="p-2 m-0 bg-light flex ctr-self">
@@ -175,31 +226,81 @@
     <script>
       function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.getElementById("main").style.filter = "blur(4px)";
+        document.getElementById("main-section").style.marginLeft = "250px";
+        document.getElementById("main-section").style.filter = "blur(4px)";
         document.getElementById("carousel").style.marginLeft = "250px";
         document.getElementById("carousel").style.filter = "blur(4px)";
       }
 
       function closeNav() {
         document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("main").style.filter = "none";
+        document.getElementById("main-section").style.marginLeft = "0";
+        document.getElementById("main-section").style.filter = "none";
         document.getElementById("carousel").style.filter = "none";
         document.getElementById("carousel").style.marginLeft = "0";
       }
 
-      //   carousel
-      const carousel = document.querySelector(".carousel");
-      let currentIndex = 0;
+// Carousel
+const carousel = document.querySelector(".carousel");
+let currentIndex = 0;
+const totalImages = carousel.children.length;
+let nextButtonClickCount = 0;
 
-      function showNextImage() {
-        currentIndex = (currentIndex + 1) % carousel.children.length;
-        const translateValue = -currentIndex * (350 + 20); // 150px image width + 20px margin
-        carousel.style.transform = `translateX(${translateValue}px)`;
-      }
+function showImage(index) {
+  const translateValue = -index * (350 + 20); // 150px image width + 20px margin
+  carousel.style.transform = `translateX(${translateValue}px)`;
+}
 
-      setInterval(showNextImage, 4000); // Change image every 4 seconds (adjust as needed)
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % totalImages;
+
+  if (currentIndex === 0) {
+    // Move to the end seamlessly
+    carousel.style.transition = "none";
+    currentIndex = totalImages;
+    showImage(currentIndex);
+    carousel.offsetHeight; // Trigger reflow
+    carousel.style.transition = ""; // Re-enable transition
+  } else {
+    showImage(currentIndex);
+  }
+
+  nextButtonClickCount++;
+
+  // Check if the "Next" button should be hidden
+  if (nextButtonClickCount >= 4) {
+    document.getElementById("nextBtn").style.display = "none";
+  }
+}
+
+function showPrevImage() {
+  currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+
+  if (currentIndex === totalImages - 1) {
+    // Move to the beginning seamlessly
+    carousel.style.transition = "none";
+    currentIndex = 0;
+    showImage(currentIndex);
+    carousel.offsetHeight; // Trigger reflow
+    carousel.style.transition = ""; // Re-enable transition
+  } else {
+    showImage(currentIndex);
+  }
+
+  // Reset the button count when going back
+  nextButtonClickCount = 0;
+
+  // Ensure the "Next" button is visible
+  document.getElementById("nextBtn").style.display = "block";
+}
+
+// Add event listeners for next and previous buttons
+document.getElementById("prevBtn").addEventListener("click", showPrevImage);
+document.getElementById("nextBtn").addEventListener("click", showNextImage);
+
+// Initial display
+showImage(currentIndex);
+
     </script>
   </body>
 </html>
